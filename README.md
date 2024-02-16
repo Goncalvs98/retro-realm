@@ -2,4 +2,5 @@
 ## Tarefas
 - [ ] Header
 - [ ] Apresentação
-
+- [ ] Jogos
+- [ ] Consoles
