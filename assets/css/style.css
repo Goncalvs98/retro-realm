@@ -26,12 +26,15 @@ header{
 
 #header-text-grid{
    display: grid;
-   grid-template-rows: 5fr 1fr 1fr 1fr;
+   grid-template-rows: 20% 20% 20% 20% 20%;
    grid-template-columns: 10% 20% 25% 25% 10%;
 }
 
-#header-text-grid #header-text-bg{
-   grid-area: 2 / 3 / 6 / 5;
+#header-text-bg{
+   grid-area: 6 / 3 / 7 / 5;
+   /* grid-column-start: 3;
+   grid-column-end: 5;
+   grid-row-start: 6; */
    background-color: rgba(178, 201, 171, 0.1);
 } 
 
