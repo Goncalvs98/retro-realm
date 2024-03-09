@@ -4,14 +4,13 @@
 header{
    height: 100vh;
 }
-
    header::before{
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       background-color: rebeccapurple;
-      background-image: url('../images/RetroRealm_bg.png');
+      background-image: url('../images/RetroRealm_bg_2.png');
       background-size: cover;
       display: block;
       width: 100vw;
@@ -25,11 +24,32 @@ header{
       font-size: 32px;
    }
 
+#header-text-grid{
+   display: grid;
+   grid-template-rows: 5fr 1fr 1fr 1fr;
+   grid-template-columns: 10% 20% 25% 25% 10%;
+}
+
+#header-text-grid #header-text-bg{
+   grid-area: 2 / 3 / 6 / 5;
+   background-color: rgba(178, 201, 171, 0.1);
+} 
+
+
 h1{
    color: #3D405B; 
    font-family: 'Monserrat', sans-serif;
    font-size: 48px;
    stroke: #E8DDB5;
+   stroke-width: 1em;
+}
+
+h2{
+   color: #3D405B; 
+   font-family: 'Monserrat', sans-serif;
+   font-size: 24px;
+   stroke: #E8DDB5;
+   stroke-width: 1em;
 }
 
 #secao-apresentacao{
