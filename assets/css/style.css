@@ -44,7 +44,7 @@ h1{
    font-family: 'Monserrat', sans-serif;
    font-size: 48px;
    stroke: #E8DDB5;
-   stroke-width: 1em;
+   -webkit-text-stroke: #E8DDB5 .02em;
 }
 
 h2{
