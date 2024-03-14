@@ -78,3 +78,48 @@ h2{
 #texto-apresentacao p{
    font-size: 1.25rem;
 }
+
+#secao-jogos{
+   height: 100vh;
+   background-color: #3D405B;
+}
+
+#secao-jogos ul{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   place-items: center;
+   height: 100%;
+}
+
+#secao-jogos li{
+   list-style: none;
+}
+
+.card{
+   max-height: 420px;
+   max-width: 300px;
+   position: relative;
+   cursor: pointer;
+}
+
+.card .image{
+   height: 100%;
+   width: 100%;
+}
+
+.image img{
+   height: 100%;
+   width: 100%;
+}
+
+.card .texto{
+   position: absolute;
+   top: 0;
+   opacity: 0;
+   transition: opacity 500ms;
+}
+
+.card:hover .texto{
+   opacity: 1;
+   
+}
