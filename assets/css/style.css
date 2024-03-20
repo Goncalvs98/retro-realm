@@ -104,6 +104,7 @@ h2{
    max-width: 300px;
    position: relative;
    cursor: pointer;
+   color: #E8DDB5;
 }
 
 .card .image{
@@ -123,7 +124,7 @@ h2{
    top: 0;
    opacity: 0;
    transition: opacity 500ms;
-
+   
    background-color: rgba(61, 64, 91, 0.5);  
 }
 
