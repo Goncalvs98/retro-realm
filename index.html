@@ -63,5 +63,59 @@
             </ul>
         </section>
 
+        <section id="secao-formulario">
+            <h2>Título</h2>
+            <form action="post">
+                <div class="campo linha">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="campo">
+                    <label for="qtd">Quantidade</label>
+                    <input type="number" id="qtd" min="1" step="10">
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" id="tipo" >
+                        <option value="0">Selecione o tipo</option>
+                        <option value="1">Estático</option>
+                        <option value="2">Dinâmico</option>
+                    </select>
+                </div>
+                    
+                <div class="campo linha">
+                    <label for="">Precisa de protótipo</label>
+                    
+                    <input name="prot" type="radio" id="prot_sim">
+                    <label for="prot_sim">Sim, preciso</label>
+                    
+                    <input name="prot" type="radio" id="prot_nao">
+                    <label for="prot_nao">Não preciso</label>
+                </div>
+                <div class="campo">
+                    <input type="checkbox" id="js">
+                    <label for="js">Tem automação</label>
+                </div>   
+
+                <label for="prazo">Prazo</label>
+                <input type="range">
+
+                <input type="text" list="estados">
+
+                <datalist id="estados">
+                    <option value="RJ">Rio de janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </datalist>
+                <div class="campo">
+                    <input type="reset" value="Enviar">
+                </div>
+                <div class="campo">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </section>
+
     </body>
 </html>
