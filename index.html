@@ -64,9 +64,9 @@
         </section>
 
         <section id="secao-formulario">
-            <h2>Título</h2>
+            <h2>Faltou algum jogo? Solicite:</h2>
             <form action="post">
-                <div class="campo linha">
+                <!-- <div class="campo linha">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome">
                 </div>
@@ -113,6 +113,44 @@
                 </div>
                 <div class="campo">
                     <input type="reset" value="Limpar">
+                </div> -->
+                <div class="campo">
+                    <label for="game_title">Título do Jogo:</label>
+                    <input type="text" id="game_title" name="game_title" required>
+                </div>
+                <div class="campo">
+                    <label for="platform">Plataforma:</label>
+                    <select id="platform" name="platform" required>
+                        <option value="">Selecione uma plataforma</option>
+                        <option value="NES">NES</option>
+                        <option value="SNES">SNES</option>
+                        <option value="Sega Genesis">Sega Genesis</option>
+                        <!-- Adicione mais plataformas conforme necessário -->
+                    </select>
+                </div>
+                <div class="campo linha">
+                    <label>Gênero:</label><br>
+                    <input type="checkbox" id="genre_action" name="genre" value="Ação">
+                    <label for="genre_action">Ação</label><br>
+                    <input type="checkbox" id="genre_adventure" name="genre" value="Aventura">
+                    <label for="genre_adventure">Aventura</label><br>
+                    <!-- Adicione mais opções de gênero conforme necessário -->
+                </div>
+                <div class="campo">
+                    <label>Estado de Conservação:</label><br>
+                    <input type="radio" id="condition_good" name="condition" value="Bom">
+                    <label for="condition_good">Bom</label><br>
+                    <input type="radio" id="condition_fair" name="condition" value="Regular">
+                    <label for="condition_fair">Regular</label><br>
+                    <input type="radio" id="condition_poor" name="condition" value="Ruim">
+                    <label for="condition_poor">Ruim</label><br>
+                </div>
+                <div class="campo linha">
+                    <label for="additional_comments">Comentários Adicionais:</label><br>
+                    <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar Solicitação</button>
                 </div>
             </form>
         </section>
