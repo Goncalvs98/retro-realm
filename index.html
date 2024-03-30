@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Retro Realm</title>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
     </head>
     <body>
         <header>
@@ -61,74 +63,40 @@
                     </div>
                 </li>
             </ul>
+            
+            <p>Data provided by <a href="https://www.mobygames.com/">MobyGames</a> </p>
         </section>
 
         <section id="secao-formulario">
             <h2>Faltou algum jogo? Solicite:</h2>
             <form action="post">
-                <!-- <div class="campo linha">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome">
-                </div>
-
-                <div class="campo">
-                    <label for="qtd">Quantidade</label>
-                    <input type="number" id="qtd" min="1" step="10">
-                </div>
-
-                <div class="campo">
-                    <label for="tipo">Tipo</label>
-                    <select name="tipo" id="tipo" >
-                        <option value="0">Selecione o tipo</option>
-                        <option value="1">Estático</option>
-                        <option value="2">Dinâmico</option>
-                    </select>
-                </div>
-                    
-                <div class="campo linha">
-                    <label for="">Precisa de protótipo</label>
-                    
-                    <input name="prot" type="radio" id="prot_sim">
-                    <label for="prot_sim">Sim, preciso</label>
-                    
-                    <input name="prot" type="radio" id="prot_nao">
-                    <label for="prot_nao">Não preciso</label>
-                </div>
-                <div class="campo">
-                    <input type="checkbox" id="js">
-                    <label for="js">Tem automação</label>
-                </div>   
-
-                <label for="prazo">Prazo</label>
-                <input type="range">
-
-                <input type="text" list="estados">
-
-                <datalist id="estados">
-                    <option value="RJ">Rio de janeiro</option>
-                    <option value="SP">São Paulo</option>
-                </datalist>
-                <div class="campo">
-                    <input type="reset" value="Enviar">
-                </div>
-                <div class="campo">
-                    <input type="reset" value="Limpar">
-                </div> -->
                 <div class="campo">
                     <label for="game_title">Título do Jogo:</label>
                     <input type="text" id="game_title" name="game_title" required>
                 </div>
                 <div class="campo">
                     <label for="platform">Plataforma:</label>
-                    <select id="platform" name="platform" required>
-                        <option value="">Selecione uma plataforma</option>
-                        <option value="NES">NES</option>
-                        <option value="SNES">SNES</option>
+                    <input list="platforms" id="platform" name="platform" required>
+                    <datalist id="platforms">
+                        <option value="NES">Nintendo Entertainment System (NES)</option>
+                        <option value="SNES">Super Nintendo Entertainment System (SNES)</option>
                         <option value="Sega Genesis">Sega Genesis</option>
+                        <option value="Game Boy">Game Boy</option>
+                        <option value="Game Boy Color">Game Boy Color</option>
+                        <option value="Game Boy Advance">Game Boy Advance</option>
+                        <option value="Atari 2600">Atari 2600</option>
+                        <option value="Atari 5200">Atari 5200</option>
+                        <option value="Atari 7800">Atari 7800</option>
+                        <option value="Sega Master System">Sega Master System</option>
+                        <option value="Sega Game Gear">Sega Game Gear</option>
+                        <option value="Neo Geo">Neo Geo</option>
+                        <option value="TurboGrafx-16">TurboGrafx-16</option>
+                        <option value="Commodore 64">Commodore 64</option>
                         <!-- Adicione mais plataformas conforme necessário -->
-                    </select>
+                    </datalist>
+                    
                 </div>
-                <div class="campo linha">
+                <div class="campo">
                     <label>Gênero:</label><br>
                     <input type="checkbox" id="genre_action" name="genre" value="Ação">
                     <label for="genre_action">Ação</label><br>
@@ -144,6 +112,10 @@
                     <label for="condition_fair">Regular</label><br>
                     <input type="radio" id="condition_poor" name="condition" value="Ruim">
                     <label for="condition_poor">Ruim</label><br>
+                </div>
+                <div class="campo linha">
+                    <label for="prazo">Sua nota:</label>
+                    <input type="range">
                 </div>
                 <div class="campo linha">
                     <label for="additional_comments">Comentários Adicionais:</label><br>
