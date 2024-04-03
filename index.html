@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Retro Realm</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>
-            $(function (){
-                const notaRange = $('#notaRange');
-                const notaValor = $('#notaValorBox');
-                
-                atualizarPosicaoRotulo();
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Realm</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            const notaRange = $('#notaRange');
+            const notaValor = $('#notaValorBox');
+
+            atualizarPosicaoRotulo();
+            notaValor.text(notaRange.val());
+
+            notaRange.on("input", function () {
                 notaValor.text(notaRange.val());
-
-                notaRange.on("input", function() {
-                    notaValor.text(notaRange.val());
-                    atualizarPosicaoRotulo();
-                });
-
-                function atualizarPosicaoRotulo() {
-                    const valorRange = parseInt(notaRange.val());
-                    const larguraRange = notaRange.width();
-                    const novaPosicao = (larguraRange/10)*valorRange;
-
-                    notaValor.css('left', novaPosicao + 'px');
-                }
+                atualizarPosicaoRotulo();
             });
 
-        </script>
-    </head>
-    <body>
-        <header>
-            <div id="header-text-grid">
-                <div id="header-text-bg">
-                    <h1>Retro Realm</h1>
-                    <h2>Por dentro da historia dos jogos retro.</h2>
+            function atualizarPosicaoRotulo() {
+                const valorRange = parseInt(notaRange.val());
+                const larguraRange = notaRange.width();
+                const novaPosicao = (larguraRange / 10) * valorRange;
+
+                notaValor.css('left', novaPosicao + 'px');
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="header-text-grid">
+            <div id="header-text-bg">
+                <h1>Retro Realm</h1>
+                <h2>Por dentro da historia dos jogos retro.</h2>
+            </div>
+        </div>
+    </header>
+
+    <section id="secao-apresentacao">
+        <img src="https://github.com/goncalvs98.png" alt="Imagem de apresentação do projeto">
+        <div id="texto-apresentacao">
+            <h2>O que são jogos Retrô?</h2>
+
+            <p>
+                Os jogos retro são aqueles que foram lançados em sistemas de videogame
+                mais antigos, como o Atari, Nintendo Entertainment System (NES), Sega
+                Genesis, Super Nintendo (SNES), entre outros. Eles são caracterizados
+                por gráficos pixelizados, sons sintetizados e mecânicas de jogo simples,
+                mas viciantes.
+            </p>
+        </div>
+    </section>
+
+    <section id="secao-jogos">
+        <ul>
+            <li class="card">
+                <div class="image">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/a/a7/Chrono_Trigger.jpg" alt="">
                 </div>
-            </div>
-        </header>
+                <div class="texto">
+                    <h3>Chrono Trigger</h3>
+                    <p>Chrono Trigger (クロノ・トリガー Kurono Torigā) é um jogo de RPG eletrônico desenvolvido pela Square Co.
+                        Foi lançado para o console Super Nintendo no Japão em março de 1995, e uma versão aprimorada
+                        para PlayStation foi lançada em novembro de 1999. Uma outra versão do jogo para o console
+                        portátil Nintendo DS foi lançada em 25 de novembro de 2008 no Japão e um dia depois nos EUA. O
+                        Chrono Trigger também foi portado para telefones celulares i-mode, Virtual Console, PlayStation
+                        Network, dispositivos iOS, dispositivos Android, e Microsoft Windows. O jogo foi revolucionário
+                        para a época e exige bastante do console, é considerado por muitos um dos jogos já feitos na
+                        história dos games.</p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="image">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/0/03/Super_Mario_Bros._box.png?20100914034646"
+                        alt="">
+                </div>
+                <div class="texto">
+                    <h3>Super Mario Bros.</h3>
+                    <p>Super Mario Bros. (スーパーマリオブラザーズ Sūpā Mario Burazāzu?) é um jogo eletrônico de plataforma
+                        desenvolvido pela Nintendo Research & Development 4 e publicado pela Nintendo para o Famicom em
+                        1985 no Japão e para o Nintendo Entertainment System (NES) em 1985 e 1987 na América do Norte e
+                        Europa, respectivamente. É o sucessor do jogo de arcade Mario Bros., de 1983. Os jogadores
+                        controlam Mario, ou seu irmão Luigi no modo multijogador, enquanto viajam pelo Reino Cogumelo
+                        para resgatar a Princesa Peach de Bowser. Eles devem percorrer os mundos em uma visão em rolagem
+                        lateral, evitando perigos como inimigos e buracos com a ajuda de potencializadores como o
+                        Supercogumelo, Flor de Fogo e Superestrela.</p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="image">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/e/e0/Castlevania_Symphony_of_the_Night_Capa.jpg?20120111122907"
+                        alt="">
+                </div>
+                <div class="texto">
+                    <h3>Castlevania: Symphony of the Night</h3>
+                    <p>Castlevania: Symphony of the Night é um jogo de ação-aventura 2D desenvolvido e distribuído pela
+                        Konami em 1997. Ele é o 13º título da série Castlevania, sendo o primeiro a ser lançado para o
+                        console PlayStation e a sequência cronológica de Castlevania: Rondo of Blood.
 
-        <section id="secao-apresentacao">
-            <img src="https://github.com/goncalvs98.png" alt="Imagem de apresentação do projeto">
-            <div id="texto-apresentacao">
-                <h2>O que são jogos Retrô?</h2>
-                
-                <p>
-                    Os jogos retro são aqueles que foram lançados em sistemas de videogame 
-                    mais antigos, como o Atari, Nintendo Entertainment System (NES), Sega 
-                    Genesis, Super Nintendo (SNES), entre outros. Eles são caracterizados 
-                    por gráficos pixelizados, sons sintetizados e mecânicas de jogo simples, 
-                    mas viciantes.
-                </p>
-            </div>
-        </section>
-
-        <section id="secao-jogos">
-            <ul>
+                        Symphony of the Night foi uma obra importante para a série Castlevania, recebendo ampla
+                        aclamação crítica e posteriormente aparecendo em listas de melhores jogos de todos os tempos de
+                        várias publicações. Ele levou a série a um novo patamar, diferente dos jogos de plataforma
+                        "estágio-por-estágio" dos títulos anteriores, introduzindo um novo estilo de jogabilidade com
+                        elementos de RPG, algo que foi simulado por muitos de seus sucessores.</p>
+                </div>
+            </li>
+        </ul>
+        <!--
+                <ul>
                 <li class="card">
                     <div class="image">
                         <img src="https://cdn.mobygames.com/covers/4062982-the-x-files-game-windows-front-cover.jpg" alt="">
@@ -88,101 +144,103 @@
             </ul>
             
             <p class="message">Data provided by <a href="https://www.mobygames.com/">MobyGames</a> </p>
-        </section>
+            -->
+    </section>
 
-        <section id="secao-formulario">
-            <h2>Faltou algum jogo? Solicite:</h2>
-            <form action="post">
-                <div class="campo">
-                    <label for="game_title">Título do Jogo:</label>
-                    <input type="text" id="game_title" name="game_title" required>
-                </div>
-                <div class="campo">
-                    <label for="platform">Plataforma:</label>
-                    <input list="platforms" id="platform" name="platform" required>
-                    <datalist id="platforms">
-                        <option value="NES">Nintendo Entertainment System (NES)</option>
-                        <option value="SNES">Super Nintendo Entertainment System (SNES)</option>
-                        <option value="Sega Genesis">Sega Genesis</option>
-                        <option value="Game Boy">Game Boy</option>
-                        <option value="Game Boy Color">Game Boy Color</option>
-                        <option value="Game Boy Advance">Game Boy Advance</option>
-                        <option value="Atari 2600">Atari 2600</option>
-                        <option value="Atari 5200">Atari 5200</option>
-                        <option value="Atari 7800">Atari 7800</option>
-                        <option value="Sega Master System">Sega Master System</option>
-                        <option value="Sega Game Gear">Sega Game Gear</option>
-                        <option value="Neo Geo">Neo Geo</option>
-                        <option value="TurboGrafx-16">TurboGrafx-16</option>
-                        <option value="Commodore 64">Commodore 64</option>
-                        <!-- Adicione mais plataformas conforme necessário -->
-                    </datalist>
-                    
-                </div>
-                <div class="campo checkbox-wrapper-27">
-                    <label>Gênero:</label><br>
-                    
-                    <label for="genre_action" class="checkbox">
-                        <input type="checkbox" id="genre_action" name="genre" value="Ação">
-                        <span class="checkbox__icon"></span>
-                        Ação
-                    </label><br>
-                    <label for="genre_adventure" class="checkbox">
-                        <input type="checkbox" id="genre_adventure" name="genre" value="Aventura">
-                        <span class="checkbox__icon"></span>
-                        Aventura
-                    </label><br>
-                    <label for="genre_rpg" class="checkbox">
-                        <input type="checkbox" id="genre_rpg" name="genre" value="RPG">
-                        <span class="checkbox__icon"></span>
-                        RPG
-                    </label><br>
-                    <label for="genre_platformer" class="checkbox">
-                        <input type="checkbox" id="genre_platformer" name="genre" value="Plataforma">
-                        <span class="checkbox__icon"></span>
-                        Plataforma
-                    </label><br>
-                </div>
-                <div class="campo checkbox-wrapper-27">
-                    <p class="espacamento"></p>
-                    <label for="genre_puzzle" class="checkbox">
-                        <input type="checkbox" id="genre_puzzle" name="genre" value="Quebra-cabeça">
-                        <span class="checkbox__icon"></span>
-                        Quebra-cabeça
-                    </label><br>
-                    <label for="genre_strategy" class="checkbox">
-                        <input type="checkbox" id="genre_strategy" name="genre" value="Estratégia">
-                        <span class="checkbox__icon"></span>
-                        Estratégia
-                    </label><br>
-                    <label for="genre_sports" class="checkbox">
-                        <input type="checkbox" id="genre_sports" name="genre" value="Esportes">
-                        <span class="checkbox__icon"></span>
-                        Esportes
-                    </label><br>
-                    <label for="genre_shooter" class="checkbox">
-                        <input type="checkbox" id="genre_shooter" name="genre" value="Tiro">
-                        <span class="checkbox__icon"></span>
-                        Tiro
-                    </label><br>
-                    
-                </div>
-                <div class="campo linha">
-                    <label for="prazo">Sua nota:</label>
-                    <input type="range" id="notaRange" min="0" max="10" value="8" step=".5">
-                    <div id="notaValorBox">
-                        <span id="notaValor">0</span>
-                    </div>                    
-                </div>                
-                <div class="campo linha">
-                    <label for="additional_comments">Comentários Adicionais:</label><br>
-                    <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea>
-                </div>
-                <div>
-                    <button type="submit" class="button-20" role="button">Enviar Solicitação</button>
-                </div>
-            </form>
-        </section>
+    <section id="secao-formulario">
+        <h2>Faltou algum jogo? Solicite:</h2>
+        <form action="post">
+            <div class="campo">
+                <label for="game_title">Título do Jogo:</label>
+                <input type="text" id="game_title" name="game_title" required>
+            </div>
+            <div class="campo">
+                <label for="platform">Plataforma:</label>
+                <input list="platforms" id="platform" name="platform" required>
+                <datalist id="platforms">
+                    <option value="NES">Nintendo Entertainment System (NES)</option>
+                    <option value="SNES">Super Nintendo Entertainment System (SNES)</option>
+                    <option value="Sega Genesis">Sega Genesis</option>
+                    <option value="Game Boy">Game Boy</option>
+                    <option value="Game Boy Color">Game Boy Color</option>
+                    <option value="Game Boy Advance">Game Boy Advance</option>
+                    <option value="Atari 2600">Atari 2600</option>
+                    <option value="Atari 5200">Atari 5200</option>
+                    <option value="Atari 7800">Atari 7800</option>
+                    <option value="Sega Master System">Sega Master System</option>
+                    <option value="Sega Game Gear">Sega Game Gear</option>
+                    <option value="Neo Geo">Neo Geo</option>
+                    <option value="TurboGrafx-16">TurboGrafx-16</option>
+                    <option value="Commodore 64">Commodore 64</option>
+                    <!-- Adicione mais plataformas conforme necessário -->
+                </datalist>
 
-    </body>
+            </div>
+            <div class="campo checkbox-wrapper-27">
+                <label>Gênero:</label><br>
+
+                <label for="genre_action" class="checkbox">
+                    <input type="checkbox" id="genre_action" name="genre" value="Ação">
+                    <span class="checkbox__icon"></span>
+                    Ação
+                </label><br>
+                <label for="genre_adventure" class="checkbox">
+                    <input type="checkbox" id="genre_adventure" name="genre" value="Aventura">
+                    <span class="checkbox__icon"></span>
+                    Aventura
+                </label><br>
+                <label for="genre_rpg" class="checkbox">
+                    <input type="checkbox" id="genre_rpg" name="genre" value="RPG">
+                    <span class="checkbox__icon"></span>
+                    RPG
+                </label><br>
+                <label for="genre_platformer" class="checkbox">
+                    <input type="checkbox" id="genre_platformer" name="genre" value="Plataforma">
+                    <span class="checkbox__icon"></span>
+                    Plataforma
+                </label><br>
+            </div>
+            <div class="campo checkbox-wrapper-27">
+                <p class="espacamento"></p>
+                <label for="genre_puzzle" class="checkbox">
+                    <input type="checkbox" id="genre_puzzle" name="genre" value="Quebra-cabeça">
+                    <span class="checkbox__icon"></span>
+                    Quebra-cabeça
+                </label><br>
+                <label for="genre_strategy" class="checkbox">
+                    <input type="checkbox" id="genre_strategy" name="genre" value="Estratégia">
+                    <span class="checkbox__icon"></span>
+                    Estratégia
+                </label><br>
+                <label for="genre_sports" class="checkbox">
+                    <input type="checkbox" id="genre_sports" name="genre" value="Esportes">
+                    <span class="checkbox__icon"></span>
+                    Esportes
+                </label><br>
+                <label for="genre_shooter" class="checkbox">
+                    <input type="checkbox" id="genre_shooter" name="genre" value="Tiro">
+                    <span class="checkbox__icon"></span>
+                    Tiro
+                </label><br>
+
+            </div>
+            <div class="campo linha">
+                <label for="prazo">Sua nota:</label>
+                <input type="range" id="notaRange" min="0" max="10" value="8" step=".5">
+                <div id="notaValorBox">
+                    <span id="notaValor">0</span>
+                </div>
+            </div>
+            <div class="campo linha">
+                <label for="additional_comments">Comentários Adicionais:</label><br>
+                <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="button-20" role="button">Enviar Solicitação</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+
 </html>
