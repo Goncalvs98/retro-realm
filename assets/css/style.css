@@ -3,14 +3,69 @@
 
 :root {
    --cor-primaria: #3D405B;
+   --cor-primaria-50: #f5f6f9;
+   --cor-primaria-100: #e7eaf2;
+   --cor-primaria-200: #d5dae8;
+   --cor-primaria-300: #b8c2d8;
+   --cor-primaria-400: #95a3c5;
+   --cor-primaria-500: #7c89b5;
+   --cor-primaria-600: #6a73a6;
+   --cor-primaria-700: #5e6497;
+   --cor-primaria-800: #50547d;
+   --cor-primaria-850: #3D405B;
+   --cor-primaria-950: #2c2d3f;
    --cor-secundaria: #E8DDB5;
+   --cor-secundaria-50: #faf8f0;
+   --cor-secundaria-100: #f1ebd4;
+   --cor-secundaria-200: #e8ddb5;
+   --cor-secundaria-300: #d4bd75;
+   --cor-secundaria-400: #caa755;
+   --cor-secundaria-500: #c08e40;
+   --cor-secundaria-600: #a97236;
+   --cor-secundaria-700: #8d5730;
+   --cor-secundaria-800: #74462c;
+   --cor-secundaria-900: #603b27;
+   --cor-secundaria-950: #361e12;
    --cor-terciaria: #A8C7BB;
+   --cor-terciaria-50: #f2f7f5;
+   --cor-terciaria-100: #dfece5;
+   --cor-terciaria-200: #c1d9ce;
+   --cor-terciaria-300: #a8c7bb;
+   --cor-terciaria-400: #6b9c8a;
+   --cor-terciaria-500: #4b7e6d;
+   --cor-terciaria-600: #386356;
+   --cor-terciaria-700: #2c5046;
+   --cor-terciaria-800: #254038;
+   --cor-terciaria-900: #1f352f;
+   --cor-terciaria-950: #111d1a;
    --cor-quaternaria: #A28F9D;
+   --cor-quaternaria-50: #f8f7f8;
+   --cor-quaternaria-100: #f3f0f3;
+   --cor-quaternaria-200: #e8e2e6;
+   --cor-quaternaria-300: #d5ccd3;
+   --cor-quaternaria-400: #baacb6;
+   --cor-quaternaria-500: #a28f9d;
+   --cor-quaternaria-600: #8b7785;
+   --cor-quaternaria-700: #74626d;
+   --cor-quaternaria-800: #62525d;
+   --cor-quaternaria-900: #54474f;
+   --cor-quaternaria-950: #30272d;
    --cor-quintenaria: #A5402D;
+   --cor-quintenaria-50:  #fcf5f0;
+   --cor-quintenaria-100:  #f8e8dc;
+   --cor-quintenaria-200:  #efcfb9;
+   --cor-quintenaria-300:  #e5ad8c;
+   --cor-quintenaria-400:  #d9855e;
+   --cor-quintenaria-500:  #d1663e;
+   --cor-quintenaria-600:  #c35133;
+   --cor-quintenaria-700:  #a5402d;
+   --cor-quintenaria-800:  #82342a;
+   --cor-quintenaria-900:  #692d25;
+   --cor-quintenaria-950:  #381512;
    --espaco-lateral: 5rem;
  }
 body{
-   background: #EEE;
+   background: var(--cor-primaria-50);
 }
 header{
    height: 100vh;
@@ -20,7 +75,7 @@ header{
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rebeccapurple;
+      background-color: var(--cor-primaria-950);
       background-image: url('../images/RetroRealm_bg_2.png');
       background-size: cover;
       display: block;
@@ -32,7 +87,7 @@ header{
    header h2{
       color: var(--cor-secundaria);
       font-family: 'Kode Mono';
-      font-size: 32px;
+      font-size: 2rem;
       stroke: var(--cor-primaria);
       -webkit-text-stroke: var(--cor-primaria) .02em;
    }
@@ -52,7 +107,7 @@ header{
 h1{
    color: var(--cor-primaria); 
    font-family: 'Monserrat', sans-serif;
-   font-size: 48px;
+   font-size: 3rem;
    stroke: var(--cor-secundaria);
    -webkit-text-stroke: var(--cor-secundaria) .02em;
 }
@@ -60,7 +115,7 @@ h1{
 h2{
    color: var(--cor-primaria); 
    font-family: 'Monserrat', sans-serif;
-   font-size: 24px;
+   font-size: 1.5rem;
    stroke: var(--cor-secundaria);
    stroke-width: 1em;
 }
@@ -80,7 +135,7 @@ h2{
    }
 
 #texto-apresentacao{
-   color: black;
+   color: var(--cor-primaria-950);
 }
 #texto-apresentacao h2{
    font-size: 2.25rem;
@@ -92,7 +147,10 @@ h2{
 #secao-jogos{
    height: 100vh;
    padding-left: 0;
-   background-color: var(--cor-primaria);
+   background: linear-gradient(to top, 
+    var(--cor-primaria-950),
+    var(--cor-primaria-800)
+   );
 }
 
 #secao-jogos ul{
@@ -313,7 +371,7 @@ input[type=rabge]{
    appearance: button;
    background-color: var(--cor-primaria);
    background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
-   border: 1px solid var(--cor-primaria);
+   border: 1px solid var(--cor-primaria-950);
    border-radius: 1rem;
    box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,rgba(46, 54, 80, 0.075) 0 1px 1px;
    box-sizing: border-box;
@@ -341,7 +399,7 @@ input[type=rabge]{
  }
  
  .button-20:hover {
-   background-color: var(--cor-primaria);
+   background-color: var(--cor-primaria-800);
    border-color: var(--cor-primaria);
  }
  
@@ -352,7 +410,7 @@ input[type=rabge]{
  }
  
  .button-20:active {
-   background-color: var(--cor-primaria);
+   background-color: var(--cor-primaria-700  );
    background-image: none;
    border-color: var(--cor-primaria);
    box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
@@ -374,3 +432,11 @@ input[type=rabge]{
    border-radius: .05rem;
    color: var(--cor-primaria);
  }
+
+ input:required::after,
+select:required::after,
+textarea:required::after {
+  content: "*"; /* Este é o símbolo que aparecerá ao lado do campo obrigatório */
+  color: red; /* Cor do símbolo */
+  margin-left: 5px; /* Espaçamento entre o campo e o símbolo */
+}

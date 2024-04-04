@@ -152,11 +152,11 @@
         <form action="post">
             <div class="campo">
                 <label for="game_title">Título do Jogo:</label>
-                <input type="text" id="game_title" name="game_title" required>
+                <input type="text" placeholder="Digite o título do jogo" id="game_title" name="game_title" required title="Por favor, preencha este campo.">
             </div>
             <div class="campo">
                 <label for="platform">Plataforma:</label>
-                <input list="platforms" id="platform" name="platform" required>
+                <input list="platforms" placeholder="Selecione a plataforma" id="platform" name="platform" required title="Por favor, preencha este campo.">
                 <datalist id="platforms">
                     <option value="NES">Nintendo Entertainment System (NES)</option>
                     <option value="SNES">Super Nintendo Entertainment System (SNES)</option>
@@ -233,7 +233,7 @@
             </div>
             <div class="campo linha">
                 <label for="additional_comments">Comentários Adicionais:</label><br>
-                <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea>
+                <textarea id="additional_comments" placeholder="Adicione seus comentários sobre o jogo" maxlength="2000" name="additional_comments" rows="4" cols="50"></textarea>
             </div>
             <div>
                 <button type="submit" class="button-20" role="button">Enviar Solicitação</button>
