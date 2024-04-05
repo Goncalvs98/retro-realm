@@ -1,6 +1,7 @@
 # Retro Realm
 ## Tarefas
-- [ ] Header
-- [ ] Apresentação
-- [ ] Jogos
-- [ ] Consoles
+- [x] Header
+- [x] Apresentação
+- [x] Jogos
+- [x] Formulário
+- [ ] Sobre
