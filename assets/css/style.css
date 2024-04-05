@@ -147,6 +147,7 @@ h2{
 #secao-jogos{
    height: 100vh;
    padding-left: 0;
+   left: 0vw;
    background: linear-gradient(to top, 
     var(--cor-primaria-950),
     var(--cor-primaria-800)
@@ -440,3 +441,56 @@ textarea:required::after {
   color: red; /* Cor do símbolo */
   margin-left: 5px; /* Espaçamento entre o campo e o símbolo */
 }
+
+#secao-sobre{
+   height: 40vh;
+   width: 100%;
+   background-color: var(--cor-secundaria-50);
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+   gap: 50rem;
+}
+
+   #secao-sobre  #imagem-esquerda{
+      top: 0;
+      left: 0;
+   }
+      #secao-sobre  #imagem-esquerda img{
+         width: 25rem;
+         content: url(../images/bg-remover-1712334468229.png);
+      }
+   #secao-sobre  #imagem-direita{
+      top: 0;
+      right: 0;
+   }
+      #secao-sobre  #imagem-direita img{
+         width: 25rem;
+         content: url(../images/bg-remover-1712334497448.png);
+      }
+   
+#texto-sobre{
+   background: url(../images/bg-pergaminho.png);
+   position: absolute;
+   height: 100%;
+   width: 15%;
+   display: block;
+   background-size: 100%;
+}
+
+#texto-sobre *{
+   display: flex;
+   justify-content: center;
+}
+
+#texto-sobre h2{
+   padding-top: 4rem;
+}
+/*
+
+   display: flex;
+   justify-content: center;
+   align-items: top;
+   flex-direction: column;
+*/
