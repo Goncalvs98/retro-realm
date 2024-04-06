@@ -4,4 +4,4 @@
 - [x] Apresentação
 - [x] Jogos
 - [x] Formulário
-- [ ] Sobre
+- [x] Sobre

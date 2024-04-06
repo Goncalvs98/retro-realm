@@ -434,63 +434,88 @@ input[type=rabge]{
    color: var(--cor-primaria);
  }
 
- input:required::after,
-select:required::after,
-textarea:required::after {
-  content: "*"; /* Este é o símbolo que aparecerá ao lado do campo obrigatório */
-  color: red; /* Cor do símbolo */
-  margin-left: 5px; /* Espaçamento entre o campo e o símbolo */
-}
-
-#secao-sobre{
-   height: 40vh;
+ #secao-sobre {
+   height: 50vh;
    width: 100%;
    background-color: var(--cor-secundaria-50);
    display: flex;
    align-items: center;
    justify-content: space-around;
    position: relative;
-   gap: 50rem;
 }
 
-   #secao-sobre  #imagem-esquerda{
-      top: 0;
-      left: 0;
-   }
-      #secao-sobre  #imagem-esquerda img{
-         width: 25rem;
-         content: url(../images/bg-remover-1712334468229.png);
-      }
-   #secao-sobre  #imagem-direita{
-      top: 0;
-      right: 0;
-   }
-      #secao-sobre  #imagem-direita img{
-         width: 25rem;
-         content: url(../images/bg-remover-1712334497448.png);
-      }
-   
-#texto-sobre{
-   background: url(../images/bg-pergaminho.png);
+#texto-sobre {
+   background-image: url(../images/bg-pergaminho.png);
    position: absolute;
    height: 100%;
-   width: 15%;
-   display: block;
-   background-size: 100%;
+   width: 25%;
+   padding: 2rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: var(--cor-primaria);
+   z-index: 2;
 }
 
-#texto-sobre *{
+#texto-sobre:first-child{
    display: flex;
    justify-content: center;
-}
-
-#texto-sobre h2{
-   padding-top: 4rem;
-}
-/*
-
-   display: flex;
-   justify-content: center;
-   align-items: top;
    flex-direction: column;
-*/
+   align-items: center;
+}
+
+#texto-sobre h2 {
+   font-size: 1.5rem;
+   margin-bottom: 1rem;
+}
+
+#texto-sobre p {
+   font-size: 1rem;
+   line-height: 1.5;
+   margin-bottom: 1rem;
+}
+
+.linha-equipe a {
+   color: var(--cor-primaria);
+   text-decoration: underline;
+}
+
+.linha-equipe a:hover{
+   cursor: pointer;
+}
+
+.linha-equipe a:active{
+   color: var(--cor-secundaria-500);
+   text-decoration: none;
+}
+
+.linha-equipe a:visited{
+   color: var(--cor-quintenaria);
+   text-decoration: double;
+}
+
+#imagem-esquerda,
+#imagem-direita {
+   position: absolute;
+   top: 0;
+   width: 25%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+#imagem-esquerda {
+   left: 0;
+   background-image: url(../images/bg-remover-1712334468229.png);
+}
+
+#imagem-direita {
+   right: 0;
+   background-image: url(../images/bg-remover-1712334497448.png);
+}
+
+.github-icon {
+   display: inline-block;
+   width: 16px; /* Ajuste conforme necessário */
+   height: 16px; /* Ajuste conforme necessário */
+   margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
