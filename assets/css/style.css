@@ -279,6 +279,7 @@ input[type=rabge]{
      overflow: hidden;
      width: 100%;
      -webkit-appearance: none;
+     appearance: none;
      background-color: var(--cor-terciaria);
    }
    
@@ -340,7 +341,7 @@ input[type=rabge]{
 
   .checkbox-wrapper-27 .checkbox__icon:before {
     font-family: "icons-27";
-    speak: none;
+    speak-as: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
