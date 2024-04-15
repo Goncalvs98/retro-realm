@@ -8,30 +8,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <script src="./assets/js/script.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            const notaRange = $('#notaRange');
-            const notaValor = $('#notaValorBox');
-
-            atualizarPosicaoRotulo();
-            notaValor.text(notaRange.val());
-
-            notaRange.on("input", function () {
-                notaValor.text(notaRange.val());
-                atualizarPosicaoRotulo();
-            });
-
-            function atualizarPosicaoRotulo() {
-                const valorRange = parseInt(notaRange.val());
-                const larguraRange = notaRange.width();
-                const novaPosicao = (larguraRange / 10) * valorRange;
-
-                notaValor.css('left', novaPosicao + 'px');
-            }
-        });
-
-    </script>
 </head>
 
 <body>
@@ -113,39 +89,6 @@
                 </div>
             </li>
         </ul>
-        <!--
-                <ul>
-                <li class="card">
-                    <div class="image">
-                        <img src="https://cdn.mobygames.com/covers/4062982-the-x-files-game-windows-front-cover.jpg" alt="">
-                    </div>
-                    <div class="texto">
-                        <h3>The X-Files Game</h3>
-                        <p>As an extension of one of the most long-running television series of all time, <em>The X-Files</em>, play through the eyes of Special Agent Craig Willmore, a new FBI field investigator brought in to locate missing agents Fox Mulder and Dana Scully whose last location was the Everett, Washington, area. In this \"movie quality\" video production, characters are played by the actors and actresses from the show, including Gillian Anderson (Scully) and David Duchovny (Mulder).</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="image">
-                        <img src="https://cdn.mobygames.com/covers/6287649-who-framed-roger-rabbit-dos-front-cover.jpg" alt="">
-                    </div>
-                    <div class="texto">
-                        <h3>Who Framed Roger Rabbit</h3>
-                        <p>Roger Rabbit has been framed for the murder of Marvin Acme, head of the Acme Corporation. Acme's will states that upon his death, Toon Town would be left to the Toons, but the will is nowhere to be found. You have to find the will and save your wife, Jessica, from Judge Doom and his weasels.</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="image">
-                        <img src="https://cdn.mobygames.com/covers/6743023-wing-commander-dos-front-cover.jpg" alt="">
-                    </div>
-                    <div class="texto">
-                        <h3>SMAC</h3>
-                        <p>The Confederation have been at war with the Kilrathi for the past 20 years, and you're just now joining the Vega campaign. You're a 2nd Lieutenant just out of the Academy, with some good work under your belt. You're posted to Tiger's Claw, the flagship of the Confederation Fleet. Will you help the Confederation to victory, or go down in infamy? </p>
-                    </div>
-                </li>
-            </ul>
-            
-            <p class="message">Data provided by <a href="https://www.mobygames.com/">MobyGames</a> </p>
-            -->
     </section>
 
     <section id="secao-formulario">
@@ -155,9 +98,10 @@
                 <label for="game_title">Título do Jogo:</label>
                 <input type="text" placeholder="Digite o título do jogo" id="game_title" name="game_title" required title="Por favor, preencha este campo.">
             </div>
+            
             <div class="campo">
                 <label for="platform">Plataforma:</label>
-                <input list="platforms" placeholder="Selecione a plataforma" id="platform" name="platform" required title="Por favor, preencha este campo.">
+                <input list="platforms" placeholder="Selecione a plataforma" id="platformInput" name="platformInput"  multiple title="Por favor, preencha este campo.">
                 <datalist id="platforms">
                     <option value="NES">Nintendo Entertainment System (NES)</option>
                     <option value="SNES">Super Nintendo Entertainment System (SNES)</option>
@@ -173,10 +117,15 @@
                     <option value="Neo Geo">Neo Geo</option>
                     <option value="TurboGrafx-16">TurboGrafx-16</option>
                     <option value="Commodore 64">Commodore 64</option>
-                    <!-- Adicione mais plataformas conforme necessário -->
                 </datalist>
-
             </div>
+            
+            <div class="campo linha">
+                <section id="platformCards">
+                    <!-- Aqui serão adicionados os cards das plataformas selecionadas -->
+                </section>
+            </div>
+                
             <div class="campo checkbox-wrapper-27">
                 <label>Gênero:</label><br>
 
@@ -240,14 +189,11 @@
                 <button type="submit" class="button-20" role="button">Enviar Solicitação</button>
             </div>
         </form>
-
-        <!-- <span id="notaFinal"> nota </span> -->
     </section>
 
     <section id="secao-sobre">
         <div id="texto-sobre">
             <h2>Sobre Nós</h2>
-            <!-- <p>Somos entusiastas de jogos retrô apaixonados por preservar e celebrar a história dos videogames. Nosso objetivo é compartilhar essa paixão com você, trazendo informações, curiosidades e nostalgia sobre os jogos que marcaram época.</p> -->
             <div class="equipe">
                 <div class="linha-equipe">
                     <span class="github-icon"><svg class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></span>
